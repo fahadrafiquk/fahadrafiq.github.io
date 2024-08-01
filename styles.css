@@ -1,155 +1,50 @@
-/* Reset some default browser styles */
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif; /* Custom font */
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4; /* Light gray background for a clean look */
-    margin: 0;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: 'Montserrat', sans-serif;
+    color: #0021A5; /* UF Blue */
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #ffffff; /* White background with shadow */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #0021a5; /* Left border accent in UF blue */
-}
-
-h1, h2, h3 {
-    color: #0021a5; /* UF blue for headings */
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-weight: 700; /* Bold heading */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
-}
-
-h2 {
-    font-size: 1.75em;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    border-bottom: 3px solid #fa4616; /* Orange underline for h2 */
-    padding-bottom: 5px;
-}
-
-h3 {
-    font-size: 1.3em;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: 600; /* Semi-bold heading */
-}
-
-p {
-    margin-bottom: 15px;
-    line-height: 1.8;
-}
-
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #fa4616; /* UF orange for links */
-    text-decoration: none;
-    font-weight: 500; /* Medium weight */
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #0021a5; /* UF blue on hover */
-}
-
-.address, .contact {
-    margin-bottom: 20px;
-}
-
-.contact p, .address p {
-    margin-bottom: 5px;
-}
-
-.contact p strong, .address p strong {
-    font-weight: bold;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section h2 {
-    border-bottom: 2px solid #0021a5; /* UF blue underline for sections */
-    padding-bottom: 5px;
-}
-
-.skills, .research, .experience, .education, .publications, .presentations, .abstracts, .awards, .training {
-    margin-bottom: 20px;
-}
-
-.skills ul, .research ul, .experience ul, .education ul, .publications ul, .presentations ul, .abstracts ul, .awards ul, .training ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.skills ul li, .research ul li, .experience ul li, .education ul li, .publications ul li, .presentations ul li, .abstracts ul li, .awards ul li, .training ul li {
-    margin-bottom: 10px;
-}
-
-/* Additional styling for graphics and backgrounds */
-.header {
-    background: url('https://www.example.com/path-to-your-image.jpg') no-repeat center center/cover;
-    padding: 50px;
-    color: #ffffff;
     text-align: center;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header h1 {
-    color: #ffffff;
+.error h1 {
+    font-size: 10rem;
+    margin: 0;
+    color: #FA4616; /* UF Orange */
 }
 
-.footer {
-    text-align: center;
-    padding: 10px;
-    background: #0021a5; /* UF blue for the footer */
-    color: #ffffff;
-    border-radius: 0 0 12px 12px;
-    margin-top: 20px;
-}
-
-.footer p {
+.error p {
+    font-size: 2rem;
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
+.error a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FA4616; /* UF Orange */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-    h1 {
-        font-size: 2em;
-    }
+.error a:hover {
+    background-color: #e03b12;
+}
 
-    h2 {
-        font-size: 1.5em;
-    }
+.gator {
+    margin-top: 20px;
+}
 
-    h3 {
-        font-size: 1.2em;
-    }
+.gator img {
+    width: 150px;
+    height: auto;
 }
