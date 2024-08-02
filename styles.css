@@ -7,7 +7,7 @@ body, h1, h2, p, ul, li {
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(to right, #d10d0d, #d12d0d);
+    background: linear-gradient(to right, #091fe6, #2b1e1b);
     color: #333;
     padding: 0;
     margin: 0;
@@ -15,7 +15,7 @@ body {
 
 header {
     background: #3498db;
-    color: #fff;
+    color: #2b1e1b;
     padding: 20px 0;
     text-align: center;
     position: relative;
