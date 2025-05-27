@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pakistan Veterinary Clinic provides expert animal care in Pakpattan, including surgery, diagnostics, and emergency services." />
+  <title>Pakistan Veterinary Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.webp" type="image/webp" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('hero-bg.webp');">
+    <div class="hero-text">
+      <img src="logo.webp" class="logo" alt="Clinic Logo" loading="lazy">
+      <h1>Pakistan Veterinary Clinic</h1>
+      <p class="subtitle">Professional Animal Healthcare in Pākpattan</p>
+      <div class="hero-cta">
+        <a href="tel:+923313004050" class="btn call">Call: +92 331 3004050</a>
+        <a href="mailto:contact@pakvetclinic.com" class="btn email">Email Us</a>
+        <a href="#contact" class="btn">Book Appointment</a>
+      </div>
+      <a href="https://maps.google.com/?cid=15733949134164318637" class="google-badge" target="_blank" rel="noopener noreferrer">
+        ★ 4.7 (67 Reviews)
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="topnav">
+    <a href="#overview">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </nav>
+
+  <main>
+    <!-- About Section -->
+    <section id="overview" class="content-section">
+      <h2>About the Clinic</h2>
+      <p>Founded in 2014 by Dr. Muhammad Haris Aziz and later developed by <strong>Dr. Adnan Maqsood</strong>, our clinic provides expert animal care in Pākpattan.</p>
+      <p>Dr. Adnan, a DVM & MPhil graduate from UVAS, leads a skilled team offering surgery, diagnostics, and care across species.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+      <h2>Our Services</h2>
+      <ul class="services">
+        <li>✅ Emergency Treatment</li>
+        <li>✅ Vaccinations & Annual Exams</li>
+        <li>✅ Deworming & Parasite Control</li>
+        <li>✅ Reproductive Surgeries</li>
+        <li>✅ Orthopedic & Soft Tissue Surgeries</li>
+        <li>✅ Internal Medicine & Diagnostics</li>
+        <li>✅ Exotic Animal Care</li>
+        <li>✅ Nutrition Counseling</li>
+        <li>✅ Veterinary Pharmacy</li>
+      </ul>
+    </section>
+
+    <!-- Gallery Slideshow -->
+    <section id="gallery" class="content-section">
+      <h2>Clinic Gallery</h2>
+      <div class="slideshow" onmouseenter="pause = true" onmouseleave="pause = false">
+        <div class="slides fade">
+          <img src="surgery1.webp" alt="Surgical procedure underway" loading="lazy">
+          <div class="caption">Surgical procedure underway</div>
+        </div>
+        <div class="slides fade">
+          <img src="pharmacy.webp" alt="Veterinary pharmacy" loading="lazy">
+          <div class="caption">Veterinary pharmacy</div>
+        </div>
+        <!-- Add more images as needed -->
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+        <div class="indicators" id="dots"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="content-section">
+      <h2>Client Testimonials</h2>
+      <div class="testimonial">
+        <p>"Professional and compassionate care by Dr. Adnan and team."</p>
+        <span>— Sami Imam</span>
+      </div>
+      <div class="testimonial">
+        <p>"Best vet in town! Great surgical skills and clean clinic."</p>
+        <span>— Muhammad Omer</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="content-section">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> <a href="tel:+923313004050">+92 331 3004050</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@pakvetclinic.com">contact@pakvetclinic.com</a></p>
+    </section>
+
+    <!-- Location -->
+    <section id="location" class="content-section">
+      <h2>Find Us</h2>
+      <p><strong>Plus Code:</strong> <a href="https://maps.google.com/?q=89MQ%2BFW%20Pākpattan,%20Pakistan" target="_blank" rel="noopener noreferrer">89MQ+FW Pākpattan, Pakistan</a></p>
+      <iframe
+        src="https://www.google.com/maps?q=89MQ%2BFW%20Pākpattan,%20Pakistan&z=15&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
+    </section>
+  </main>
+
+  <!-- WhatsApp Button -->
+  <a class="whatsapp" href="https://wa.me/923313004050" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
+  <footer>
+    <p>&copy; 2025 Pakistan Veterinary Clinic</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0, pause = false;
+    const dotsContainer = document.getElementById("dots");
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      for (let s of slides) s.style.display = "none";
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].style.display = "block";
+
+      // Dot indicators
+      dotsContainer.innerHTML = "";
+      for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement("span");
+        dot.className = "dot" + (i === slideIndex ? " active" : "");
+        dot.onclick = () => { slideIndex = i - 1; showSlides(); };
+        dotsContainer.appendChild(dot);
+      }
+
+      if (!pause) setTimeout(showSlides, 4000);
+    }
+
+    function changeSlide(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>
 
