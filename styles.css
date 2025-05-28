@@ -78,3 +78,8 @@ footer {
   border-radius: 10px;
   display: block;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
