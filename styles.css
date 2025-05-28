@@ -66,3 +66,15 @@ footer {
   background-color: #f5f5f5;
   color: #777;
 }
+.image-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
